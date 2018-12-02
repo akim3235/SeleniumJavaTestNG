@@ -48,5 +48,4 @@ public class YahooSearch {
     private void openMainPage() {
         driver.get("https://yahoo.com");
     }
-
 }
