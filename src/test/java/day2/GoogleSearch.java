@@ -42,7 +42,7 @@ public class GoogleSearch {
     }
 
 
-    public void threadSleep(){
+    public static void threadSleep(){
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
