@@ -2,7 +2,11 @@ package day3;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -26,15 +30,32 @@ public class YahooSearch {
         openMainPage();
         typeQuery(queryString);
         submitSearch();
-//        assertResults();
+        assertResults();
 
         driver.quit();
     }
 
     private void assertResults() {
-        By resultsByCSS = By.cssSelector("#yui_3_10_0_1_1543714537045_945");
-        By resultsXpath = By.xpath("//*[@id=\"yui_3_10_0_1_1543714537045_945\"]");
+        By resultsByCSS = By.cssSelector("#yui_3_10_0_1_1543460928491_407");
+        By resultsXpath = By.xpath("//*[@id=\"yui_3_10_0_1_1543460928491_407\"]");
 
+        WebElement resultSpanElement = driver.findElement(By.id("results")).
+                findElement(By.className("compPagination")).
+                findElement(By.tagName("span"));
+
+
+        String xpathValue = "";
+        String cssValue = "div.compPagination span";
+        By resultsElement = By.xpath("xpathValue");
+
+
+        explicitWait(driver, By.cssSelector(cssValue));
+        Assert.assertTrue(resultSpanElement.isDisplayed());
+    }
+
+    private void explicitWait(WebDriver driver, By element) {
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
 
     private void submitSearch() {

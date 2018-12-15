@@ -36,12 +36,8 @@ public class SignInFlow {
 
 
 //        String queryString = "Portnov School";
-//
 //        element.sendKeys(queryString);
-
-
 //        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-//
 //        WebElement resultStatsElement = driver.findElement(By.id("resultStats"));
 //        System.out.println(resultStatsElement.getText());
 
