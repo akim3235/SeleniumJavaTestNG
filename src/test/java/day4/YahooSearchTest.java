@@ -31,12 +31,12 @@ public class YahooSearchTest extends BaseTest {
                 findElement(By.tagName("span"));
 
 
-        String xpathValue = "";
+        String xpathValue = "//*[@class='compPagination']/span";
         String cssValue = "div.compPagination span";
         By resultsElement = By.xpath("xpathValue");
 
 
-        explicitWait(driver, By.cssSelector(cssValue));
+        explicitWait(driver, By.xpath(xpathValue));
         Assert.assertTrue(resultSpanElement.isDisplayed());
     }
 }
