@@ -14,6 +14,9 @@ public class BaseTest {
 
     public WebDriver driver;
 
+
+    // TODO is statement having setup for ie and chrome
+
     @BeforeSuite
     public void suiteSetup(){
         System.setProperty("webdriver.gecko.driver", "/Users/akim/IdeaProjects/SeleniumJavaTestNG/src/test/resources/geckodriver");

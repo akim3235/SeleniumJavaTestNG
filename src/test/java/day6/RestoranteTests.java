@@ -23,8 +23,9 @@ public class RestoranteTests extends BaseTest {
 
 
         openPage("http://52.9.182.211:3001/v1/log-in");
-
     }
+
+
     // TODO: get values from JSON response
     private String getKeyValue(String password, String response) {
         String keyValue = "";
@@ -36,13 +37,12 @@ public class RestoranteTests extends BaseTest {
         return keyValue;
     }
 
+
     // TODO: make Http Request same way we did in Postman
     private String executeHttpRequest(String url, String params, String requestBody) {
-        String result;
+        String result = null;
 
         /////
-
-
 
 
         return result;
